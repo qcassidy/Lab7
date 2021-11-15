@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Send on Channel 1"
         android:textSize="18dp"
+        android:onClick="sendOnChannel1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -51,10 +52,11 @@
         android:layout_height="wrap_content"
         android:text="Send on Channel 2"
         android:textSize="18dp"
+        android:onClick="sendOnChannel2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/channel1" />
 
