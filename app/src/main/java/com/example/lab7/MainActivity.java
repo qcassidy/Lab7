@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextTitle;
     private EditText editTextMessage;
     public static final String CHANNEL_1_ID = "channel1";
+    public static final String CHANNEL_2_ID = "channel2";
 
 
     @Override
@@ -38,5 +39,20 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         notificationManager.notify(1, notification);
+    }
+
+    public void sendOnChannel2(View v) {
+        String title = editTextTitle.getText().toString();
+        String message = editTextMessage.getText().toString();
+
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_2_ID)
+                .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+
+        notificationManager.notify(2, notification);
     }
 }
